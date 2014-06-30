@@ -17,4 +17,4 @@ one that works: http://lmjabreu.com/post/why-and-how-to-avoid-hamburger-menus/
 ##Bugs
 
 *	Screen flashes white on hitting back (perhaps it's just my testing-device?)
-*	Updating contents deletes email
+*	Pulling updates deletes email
