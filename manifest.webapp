@@ -1,0 +1,14 @@
+{
+  "name": "AN",
+  "description": "AN Cause",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/images/app_icon_128.png",
+    "60": "/images/app_icon_60.png"
+  },
+  "developer": {
+    "name": "Stefan Jonker",
+    "url": ""
+  },
+  "default_locale": "en"
+}
