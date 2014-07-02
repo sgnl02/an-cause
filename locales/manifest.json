@@ -1,10 +1,6 @@
 {
   "locales": [
-<<<<<<< HEAD
     "en-US"
-=======
-    "en-US",
->>>>>>> 8e97c0c472b798364139eee6a2e35344f3dcef05
   ],
   "default_locale": "en-US",
   "resources": [
