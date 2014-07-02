@@ -6,6 +6,8 @@
 
   <title>AN Cause</title>
 
+	<link rel="localization" href="locales/manifest.json">
+
   <!-- Building blocks -->
   <link rel="stylesheet" href="style/action_menu.css">
   <link rel="stylesheet" href="style/buttons.css">
@@ -41,91 +43,105 @@
     <section data-type="sidebar">
       <header>
         <menu type="toolbar">
-          <a href="#">Done</a/>
+          <a href="#" data-l10n-id="done"></a/>
         </menu>
-        <h1>AN Cause</h1>
+        <h1 data-l10n-id="titleSidebar"></h1>
       </header>
       <nav>
         <ul>
-          <li><a href="#" id="sidebar-alerts">Alerts</a></li>
-          <li><a href="#" id="sidebar-donate">Donate</a></li>
-          <li><a href="#" id="sidebar-settings">Settings</a></li>
-          <li><a href="#" id="sidebar-about">About</a></li>
+          <li><a href="#" id="sidebar-alerts" data-l10n-id="alerts"></a></li>
+          <li><a href="#" id="sidebar-donate" data-l10n-id="donate"></a></li>
+          <li><a href="#" id="sidebar-settings" data-l10n-id="settings"></a></li>
+          <li><a href="#" id="sidebar-about" data-l10n-id="about"></a></li>
         </ul>
       </nav>
     </section>
 
     <section id="drawer" role="region">
 		  <header class="fixed" id="drawerHeader">
-	        <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
-	        <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+	        <a href="#"><span class="icon icon-menu" data-l10n-id="hideSidebar"></span></a>
+	        <a href="#drawer"><span class="icon icon-menu" data-l10n-id="showSidebar">show sidebar</span></a>
 	
 					<menu type="toolbar">
-	          <button id="updateList">Update</button>
+	          <button id="updateList" data-l10n-id="update"></button>
 	        </menu>
 					
-					<h1>Alerts <em>v1.1</em></h1>
+					<h1>
+						<span data-l10n-id="titleAlerts"></span> 
+						<em data-l10n-id="titleAlertsVersion"></em>
+					</h1>
 
 					<progress class="pack-activity" value="0" max="100"></progress>
 	    </header> 
 	
 		  <article class="content scrollable header">
-		  <div data-type="list">
-		 	 <ul id="hookListItems">
-		 	 </ul>
-		  </div>
+			  <div data-type="list">
+			 	 <ul id="hookListItems"></ul>
+			  </div>
 		  </article>
     </section>
   </section>
 
   <section role="region" id="newsList" data-position="right">
   	<header class="fixed">
-  	  <a id="backToListAlerts" href="#"><span class="icon icon-back">back</span></a>
-  	  <h1>Action alert</h1>
+  	  <a id="backToListAlerts" href="#"><span class="icon icon-back" data-l10n-id="back"></span></a>
+  	  <h1 data-l10n-id="titleActionAlert"></h1>
   	</header>
   	
-  	<article id="hookNews" class="content scrollable header">
-  	</article>
-  </section>
+  	<article class="content scrollable header">
+		<header>
+			<h2 id="hookNewsTitle"></h2>
+			</header>
+			
+			<div>
+				<p id="hookNewsItem"></p>
+				<button class="recommend" id="hookTakeAction" data-l10n-id="takeAction"></button></div>
+
+				<div role="toolbar">
+					<ul>
+						<li><button id="action-share" class="action-icon email-share" data-l10n-id="shareButton"></button></li>
+					</ul>
+				</div>
+			</article>
+	</section>
 
   <section role="region" id="donate" data-position="right">
   	<header class="fixed">
-  	  <a id="backToListDonate" href="#"><span class="icon icon-back">back</span></a>
-  	  <h1>Donate</h1>
+			<a id="backToListDonate" href="#"><span class="icon icon-back" data-l10n-id="back"></span></a>
+  	  <h1 data-l10n-id="titleDonate"></h1>
   	</header>
   	
   	<article id="hookAction" class="content scrollable header">
 		<header>
-			<h2>
-				Help end animal cruelty
-			</h2>
+			<h2 data-l10n-id="lorum"></h2>
 		</header>
 
-		<p>
-			Lorum ipsum
-		</p>
+		<p data-l10n-id="lorum"></p>
   	</article>
   </section>
   
   <section role="region" id="settings" data-position="right">
   	<header class="fixed">
-  	  <a id="backToListSettings" href="#"><span class="icon icon-back">back</span></a>
+  	  <a id="backToListSettings" href="#"><span class="icon icon-back" data-l10n-id="back"></span></a>
 
 			<menu type="toolbar">
-        <button id="okBackToListSettings">Ok</button>
+        <button id="okBackToListSettings" data-l10n-id="save"></button>
       </menu>
 
-  	  <h1>Settings</h1>
+  	  <h1 data-l10n-id="titleSettings"></h1>
  		</header>
   	
   	<article class="content scrollable header">
-		<header><h2>Email</h2></header>
-			<p>Email used for news alerts</p>
+			<header><h2 data-l10n-id="titleEmail"></h2></header>
+			<p data-l10n-id="descriptionEmail"></p>
 
 			<form>
         <p>
           <input id="storeEmail" type="email" placeholder="Email address" required="">
-          <button type="reset">Clear</button>
+					<!--
+					ToDo, see: https://github.com/l20n/l20n.js/blob/master/docs/html.md
+					-->
+          <button type="reset" data-l10n-id="clearForm"></button>
         </p>
       </form>
   	</article>
@@ -133,29 +149,32 @@
 
   <section role="region" id="about" data-position="right">
   	<header class="fixed">
-  	  <a id="backToListAbout" href="#"><span class="icon icon-back">back</span></a>
-  	  <h1>About</h1>
+  	  <a id="backToListAbout" href="#"><span class="icon icon-back" data-l10n-id="back">back</span></a>
+  	  <h1 data-l10n-id="titleAbout"></h1>
   	</header>
   	
   	<article class="content scrollable header">
-		<p>
-			Lorum ipsum
-		</p>
+			<header>
+				<h2 data-l10n-id="lorum"></h2>
+			</header>
+
+			<p data-l10n-id="lorum"></p>
   	</article>
   </section>
 
   <section id="share-menu" data-position="back" class="fullscreen">
     <form role="dialog" data-type="action">
-      <header> Share with </header>
+      <header data-l10n-id="titleShareDialog"></header>
       <menu>
-        <button id="share-twitter"> Twitter </button>
-        <button id="share-menu-cancel"> Cancel </button>
+				<button id="share-twitter" data-l10n-id="twitter"></button>
+        <button id="share-menu-cancel" data-l10n-id="cancel"></button>
       </menu>
     </form>
   </section>	
 
   <script type="text/javascript" defer src="js/status.js"></script>	
   <script type="text/javascript" defer src="js/an.js"></script>	
+  <script type="text/javascript" defer src="js/l20n.js"></script>	
 
 </body>
 </html>

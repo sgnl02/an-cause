@@ -110,17 +110,9 @@
 				var listItemId = event.target.parentNode.id
 				, localStorageId = listItemId.match(/\d+$/)[0]
 				, newsItem = JSON.parse(localStorage.getItem(localStorageId));
-	
-				var actionItem = '<header><h2>' 
-						+ newsItem.title 
-						+ '</h2></header><div><p>' 
-						+ newsItem.body
-						+ '</p><button class="recommend" id="hookTakeAction">Take Action</button></div>'
-						+ '<div role="toolbar">'
-						+ '          <ul>'
-						+ '            <li><button id="action-share" class="action-icon email-share">Share</button></li>'
-						+ '          </ul>'
-						+ '</div>';
+
+				document.getElementById('hookNewsTitle').innerHTML = newsItem.title;
+				document.getElementById('hookNewsItem').innerHTML = newsItem.body;
 
 				// Share something via Twitter
 				document.querySelector('#share-twitter').addEventListener ('click', function () {
@@ -132,8 +124,6 @@
 
 					window.open('https://twitter.com/home?status=' + link, '_blank');
 				});
-	
-				document.getElementById('hookNews').insertAdjacentHTML('beforeend', actionItem);
 	
 				// If the share-button is clicked, show action-menu
 				document.querySelector('#action-share').addEventListener ('click', function () {
@@ -155,7 +145,10 @@
 					// Replacing content between tags is a pain in the butt:
 					// http://james.padolsey.com/javascript/replacing-text-in-the-dom-solved/
 	
-					document.getElementById('hookNews').innerHTML='';
+					// Emptying items on back-button
+					document.getElementById('hookNewsTitle').innerHTML = '';
+					document.getElementById('hookNewsItem').innerHTML = '';
+
 					document.querySelector('#newsList').className = 'right';
 	  				document.querySelector('[data-position="current"]').className = 'current';	
 				});
