@@ -1,0 +1,43 @@
+<!-- Sidebar -->
+<hideSidebar "Hide sidebar">
+<showSidebar "Show sidebar">
+<titleSidebar "AN Cause">
+
+<!-- Alerts -->
+<update "Update">
+<titleAlerts "Alerts">
+<titleAlertsVersion "v1.1">
+<takeAction "Take action">
+
+<!-- Action Alert -->
+<titleActionAlert "Action alerts">
+<shareButton "Share">
+
+<!-- Donate -->
+<titleDonate "Donate">
+
+<!-- Settings -->
+<titleSettings "Settings">
+<titleEmail "Email">
+<descriptionEmail "Email used for news alerts">
+<clearForm "Clear form">
+
+<!-- About -->
+<titleAbout "About">
+
+<!-- Share Menu -->
+<titleShareMenu "Share with">
+<twitter "Twitter">
+
+<!-- Sidebar -->
+<alerts "Alerts">
+<donate "Donate">
+<settings "Settings">
+<about "About">
+
+<!-- General -->
+<done "Done">
+<lorum "Lorum ipsum, lorum ipsum">
+<save "Save">
+<cancel "Cancel">
+<back "Back">
