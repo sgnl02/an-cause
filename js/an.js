@@ -1,4 +1,6 @@
 	var AN = (function () {
+		// Might break on older browsers
+		"use strict";
 
 		// Makes a loading bar below the header
 		var loading = function(number) {
