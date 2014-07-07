@@ -26,11 +26,8 @@
 <titleAbout "About">
 
 <!-- Share Menu -->
-<<<<<<< HEAD
 <titleShareDialog "Sharing">
-=======
 <titleShareMenu "Share with">
->>>>>>> 8e97c0c472b798364139eee6a2e35344f3dcef05
 <twitter "Twitter">
 
 <!-- Sidebar -->
