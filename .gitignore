@@ -47,4 +47,6 @@ _*
 
 # Other
 images
-
+dist
+manifest.webapp
+node_modules
